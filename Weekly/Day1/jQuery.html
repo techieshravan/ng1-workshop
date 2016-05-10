@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>jQuery Hello World Example</title>
+    </head>
+
+    <body>
+        <label for="name">Name :</label>
+        <input type="text" id="name" />
+        <h2 id="sayHello"></h2>
+        <script src="lib/jquery-2.2.3.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $("#name").keyup(function () {
+                    $("#sayHello").text('Hello ' + $("#name").val() + '!');
+                });
+            });
+        </script>
+    </body>
+
+</html>

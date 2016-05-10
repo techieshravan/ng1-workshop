@@ -1,0 +1,22 @@
+{
+  "name": "ng1-workshop",
+  "version": "1.0.0",
+  "description": "This repository contains [AngularJS](https://angularjs.org) demos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techieshravan/ng1-workshop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/techieshravan/ng1-workshop/issues"
+  },
+  "homepage": "https://github.com/techieshravan/ng1-workshop#readme",
+  "dependencies": {
+    "angular": "^1.4.9"
+  }
+}
