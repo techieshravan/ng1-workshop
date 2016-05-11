@@ -1,0 +1,2 @@
+angular
+    .module('ngExample3', []);
