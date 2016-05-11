@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="productsApp">
+
+    <head>
+        <title> Working with ControllerAs Syntax Example 1</title>
+    </head>
+
+    <body>
+
+      <div ng-controller="MainController as products">
+        <h1>{{products.pageTitle}}</h1>
+        <ul>
+          <li>{{products.laptops.product1}}</li>
+          <li>{{products.laptops.product2}}</li>
+          <li ng-bind="products.laptops.product3"></li>
+        </ul>
+      </div>
+
+      <script src="../../../node_modules/angular/angular.js"></script>
+      <script src="app.js"></script>
+      <script src="mainController.js"></script>
+    </body>
+
+</html>
