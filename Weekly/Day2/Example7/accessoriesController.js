@@ -22,7 +22,7 @@
         {
            name: 'Mini DisplayPort to Dual-Link DVI Adapter',
            price: 99,
-           show: false
+           show: true
         },
         {
            name: 'Magic Keyboard',
