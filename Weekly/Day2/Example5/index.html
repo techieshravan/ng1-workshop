@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="productsApp">
+
+    <head>
+        <title> Working with ControllerAs Syntax Example 2</title>
+    </head>
+
+    <body>
+
+      <div ng-controller="LaptopsController as laptops">
+        <strong>LaptopsController</strong>
+        <p>{{laptops.name}}</p>
+
+        <div ng-controller="PhonesController as phones" style="margin-left:20px;">
+          <strong>PhonesController</strong>
+          <p>{{phones.name}}</p>
+          <p>{{laptops.name}}</p>
+
+          <div ng-controller="WatchesController as watches" style="margin-left:20px;">
+            <strong>WatchesController</strong>
+            <p>{{watches.name}}</p>
+            <p>{{phones.name}}</p>
+            <p>{{laptops.name}}</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <script src="../../../node_modules/angular/angular.js"></script>
+      <script src="app.js"></script>
+      <script src="laptopsController.js"></script>
+      <script src="phonesController.js"></script>
+      <script src="watchesController.js"></script>
+    </body>
+
+</html>
