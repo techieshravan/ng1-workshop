@@ -1,4 +1,4 @@
-var myApp = angular.module('NgExample2', []);
+var myApp = angular.module('ngExample1', []);
 
 myApp.controller('MyController1', function ($scope) {
   $scope.userName = 'Shravan Kumar Kasagoni';
