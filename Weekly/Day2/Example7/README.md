@@ -1,1 +1,1 @@
-# Working with ng-show, ng-hide, ng-if directives
+# Working with ng-show, ng-hide, ng-if, ng-bind, ng-model directives
