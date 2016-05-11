@@ -6,7 +6,7 @@
         .controller('MainController1', MainController1);
 
     function MainController1($scope) {
-      $scope.pageTitle = 'MainController1';
+      $scope.title = 'MainController1';
     }
 
 })();
@@ -19,7 +19,7 @@
         .controller('MainController2', MainController2);
 
     function MainController2($scope) {
-      $scope.pageTitle = 'MainController2';
+      $scope.title = 'MainController2';
     };
 
 })();

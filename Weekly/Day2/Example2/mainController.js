@@ -7,7 +7,7 @@
 
     function MainController($scope) {
 
-      var pageTitle = 'Working with Objects in Angular JS 1';
+      var title = 'Working with Objects in Angular JS 1';
 
       var user  = {
       	name: 'Shravan Kumar Kasagoni',
@@ -17,7 +17,7 @@
       	phoneNumber: null
       }
 
-      $scope.pageTitle = pageTitle;
+      $scope.title = title;
       $scope.userDetails = user;
     };
 

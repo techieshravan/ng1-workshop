@@ -3,13 +3,13 @@
 
     angular
         .module('productsApp')
-        .controller('MainController', ProductsController);
+        .controller('ProductsController', ProductsController);
 
     function ProductsController() {
 
       var vm = this;
 
-      vm.pageTitle = "Apple Laptops";
+      vm.title = "Apple Laptops";
 
       var macBooks  = {
       	product1: 'MacBook',

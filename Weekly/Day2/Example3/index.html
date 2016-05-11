@@ -8,20 +8,20 @@
     <body>
 
       <div ng-controller="MainController1">
-        <p>{{pageTitle}}</p>
+        <p>{{title}}</p>
       </div>
 
       <div ng-controller="MainController2">
-        <p>{{pageTitle}}</p>
+        <p>{{title}}</p>
       </div>
 
       <div ng-controller="MainController1">
         <strong>Nested Controllers</strong>
 
-        <p>{{pageTitle}}</p>
+        <p>{{title}}</p>
 
         <div ng-controller="MainController2">
-          <p>{{pageTitle}}</p>
+          <p>{{title}}</p>
         </div>
 
       </div>
@@ -30,11 +30,11 @@
       <div ng-controller="MainController1">
         <strong>Nested Controllers - Access Parent Controller in Child Controller</strong>
 
-        <p>{{pageTitle}}</p>
+        <p>{{title}}</p>
 
         <div ng-controller="MainController2">
-          <p>{{pageTitle}}</p>
-          <p>{{$parent.pageTitle}} - Displaying in MainController2, should n't use $parent</p>
+          <p>{{title}}</p>
+          <p>{{$parent.title}} - Displaying in MainController2, should n't use $parent</p>
         </div>
 
       </div>
