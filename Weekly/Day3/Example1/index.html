@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="demoCityApp">
+
+    <head>
+        <title>Working with Controllers</title>
+    </head>
+
+    <body ng-controller="CityDetailController as city">
+
+      <div>
+        <p>Id: {{city.venue.id}}</p>
+        <p>Name: {{city.venue.name}}</p>
+        <p>City: {{city.venue.city}}</p>
+        <p>Country: {{city.venue.country}}</p>
+        <p>Latitude: {{city.venue.latitude}}</p>
+        <p>Longitude: {{city.venue.longitude}}</p>
+        <p>Country: {{city.venue.country_code}}</p>
+      </div>
+      <hr/>
+
+      <h2>Multiple Venues</h2>
+      <div ng-repeat="v in city.venues">
+        <p>Id: {{v.id}}</p>
+        <p>Name: {{v.name}}</p>
+        <p>City: {{v.city}}</p>
+        <p>Country: {{v.country}}</p>
+        <p>Latitude: {{v.latitude}}</p>
+        <p>Longitude: {{v.longitude}}</p>
+        <p>Country: {{v.country_code}}</p>
+        <hr/>
+      </div>
+
+
+      <!-- <div>
+        <p>Id: <span ng-bind="city.venue.id"><span></p>
+        <p>Name: <span ng-bind="city.venue.name"><span></p>
+        <p>City: <span ng-bind="city.venue.city"><span></p>
+        <p>Country: <span ng-bind="city.venue.country"><span></p>
+        <p>Latitude: <span ng-bind="city.venue.latitude"><span></p>
+        <p>Longitude: <span ng-bind="city.venue.longitude"><span></p>
+        <p>Country: <span ng-bind="city.venue.country_code"><span></p>
+        </div>
+      <hr/>
+
+      <h2>Multiple Venues</h2>
+      <div ng-repeat="v in city.venues">
+        <p>Id: <span ng-bind="v.id"><span></p>
+        <p>Name: <span ng-bind="v.name"><span></p>
+        <p>City: <span ng-bind="v.city"><span></p>
+        <p>Country: <span ng-bind="v.country"><span></p>
+        <p>Latitude: <span ng-bind="v.latitude"><span></p>
+        <p>Longitude: <span ng-bind="v.longitude"><span></p>
+        <p>Country: <span ng-bind="v.country_code"><span></p>
+        <hr/>
+      </div> -->
+
+      <script src="../../../node_modules/angular/angular.js"></script>
+      <script src="app.js"></script>
+      <script src="cityDetailController.js"></script>
+    </body>
+
+</html>

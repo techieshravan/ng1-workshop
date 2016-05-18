@@ -1,0 +1,17 @@
+.venues {
+  list-style-type: none;
+}
+
+.venues span {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+}
+
+.details {
+  float:left;
+  width:40%;
+  padding:10px 0 0 50px;
+  margin-top: 1em;
+}

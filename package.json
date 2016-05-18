@@ -1,10 +1,10 @@
 {
   "name": "ng1-workshop",
   "version": "1.0.0",
-  "description": "This repository contains [AngularJS](https://angularjs.org) demos.",
+  "description": "This repository contains AngularJS example.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "lite-server"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   "homepage": "https://github.com/techieshravan/ng1-workshop#readme",
   "dependencies": {
     "angular": "^1.4.9"
+  },
+  "devDependencies": {
+    "lite-server": "^2.2.0"
   }
 }
