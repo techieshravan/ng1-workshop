@@ -1,0 +1,389 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<title>Getting Started With Angular Services and Directives</title>
+
+		<meta name="description" content="Angular Services and Directives">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="icon" type="image/x-icon" href="/images/favicon.ico"/>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Code syntax highlighting -->
+		<!--<link rel="stylesheet" href="lib/css/default.css">-->
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section>
+					<h1 style="margin-top: 0.7em; text-transform: none; font-size: 2.5em;">Angular Services and Directives</h1>
+					<p style="margin-top: 0.5em;">
+						<small>By <a href="http://twitter.com/techieshravan">Shravan Kumar Kasagoni</a></small>
+					</p>
+				</section>
+
+				<section>
+
+					<h3 style="text-transform: none;">Shravan Kumar Kasagoni</h3>
+
+                    <h4 style="text-transform: none;">Microsoft MVP - VSDT</h4>
+
+
+					<p style="font-size: 0.8em"><a href="http://twitter.com/techieshravan">@techieshravan</a> on Twitter</p>
+
+					<p style="font-size: 0.8em"><a href="http://github.com/techieshravan">@techieshravan</a> on GitHub</p>
+
+					<p style="font-size: 0.8em"><a href="http://theshravan.net">theshravan.net</a> - Blog</p>
+
+				</section>
+
+                <section>
+                    <h2 class="headline">JavaScript Basics</h2>
+                </section>
+
+                <section>
+                    <h2 style="text-transform: none;">IIFE (Immediately Invoked Function Expression)</h2>
+                </section>
+
+                <section>
+                    <h3 style="text-transform: none;">JavaScript Function Invocation</h3>
+                    <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none; float: left;width: 49%;" class="fragment" data-fragment-index="0">
+<code style="line-height: 35px; max-height: 700px;">/* Function Declaration */
+var testMethod = function () {
+
+
+
+
+}
+
+testMethod();
+</code>
+                    </pre>
+                    <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none; float: right;width: 49%; margin-left:2%" class="fragment" data-fragment-index="1">
+<code style="line-height: 35px; max-height: 700px;">/* Function Expression */
+function testMethod () {
+
+
+
+
+}
+
+testMethod();
+</code>
+                    </pre>
+                    <p class="fragment" data-fragment-index="2" style="clear:both;">
+                        Function expressions can not be invoked before they are declared
+                    </p>
+                </section>
+
+                <section>
+                    <h3 style="text-transform: none;">Immediately Invoked Function Expression</h3>
+                    <pre style="font-size: 0.7em; margin-top: 0.5em; box-shadow: none; position: absolute;" class="fragment" data-fragment-index="0">
+<code style="line-height: 35px; max-height: 700px;">
+ function () {
+
+
+
+
+}
+
+</code>
+                    </pre>
+                    <pre style="font-size: 0.7em; margin-top: 0.5em; box-shadow: none; position: absolute;" class="fragment" data-fragment-index="1">
+<code style="line-height: 35px; max-height: 700px;">
+(function () {
+
+
+
+
+})
+
+</code>
+                    </pre>
+                    <pre style="font-size: 0.7em; margin-top: 0.5em; box-shadow: none; position: absolute;" class="fragment" data-fragment-index="2">
+<code style="line-height: 35px; max-height: 700px;">
+(function () {
+
+
+
+
+})();
+
+</code>
+                    </pre>
+                </section>
+
+                <section>
+                    <h3 style="text-transform: none;">Immediately Invoked Function Expression</h3>
+                    <ul>
+                        <li class="fragment" data-fragment-index="0" style="padding-bottom: 0.5em">IIFE is an anonymous function that is created and then immediately invoked</li>
+                        <li class="fragment" data-fragment-index="1" style="padding-bottom: 0.5em">Design pattern which produces a lexical scope using JavaScript's function scoping</li>
+                        <li class="fragment" data-fragment-index="2" style="padding-bottom: 0.5em">Used for avoiding variable hoisting and protects against polluting the global namespace</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 style="text-transform: none;">Constructor Pattern</h2>
+                </section>
+
+                <section>
+				  <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;">
+<code style="line-height: 35px; max-height: 700px;">function Property (name, city, state) {
+
+  this.name = name;
+  this.city = city;
+  this.state = state;
+
+  this.displayPropertyInfo = function () {
+    return this.name + ', ' + this.city +  ', ' + this.state;
+  };
+}
+
+var prop = new Property('Pensacola Place', 'Chicago', 'IL');
+
+console.log(prop.name);
+console.log(prop.displayPropertyInfo());
+</code>
+                    </pre>
+                </section>
+
+                <section>
+                    <h2 style="text-transform: none;">Module Pattern</h2>
+                </section>
+
+                <section>
+                    <h2 style="text-transform: none;">Using Object Literal Notation</h2>
+                </section>
+
+                <section>
+				  <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;">
+    <code style="line-height: 35px; max-height: 700px;">var propertyModule = {
+
+  name: 'Pensacola Place',
+
+  details: {
+    city: 'Chicago',
+    state: 'IL';
+  },
+
+  displayPropertyInfo: function () {
+    return this.name + ', ' + this.details.city;
+  }
+};
+
+console.log(propertyModule.name);
+console.log(propertyModule.displayPropertyInfo());
+</code>
+                    </pre>
+                </section>
+
+                <section>
+                    <h2 style="text-transform: none;">Using IIFE (Immediately Invoked Function Expression)</h2>
+                </section>
+
+                <section>
+				  <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;">
+    <code style="line-height: 35px; max-height: 700px;">var propertyModule = (function () {
+
+  /* private members */
+  var city = 'Chicago',
+      state = 'IL';
+
+  var displayDetails = function () {
+    console.log(city, state);
+  };
+
+  /* public members */
+  return {
+    name: 'Pensacola Place',
+    displayPropertyInfo: function () {
+        return name + ', ' + city;
+    }
+  };
+})();
+</code>
+                    </pre>
+                </section>
+
+                <section>
+				  <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;">
+    <code style="line-height: 35px; max-height: 700px;">
+/* public members */
+
+console.log(propertyModule.name);
+
+console.log(propertyModule.displayPropertyInfo());
+
+propertyModule.name = 'Orange Apt';
+
+</code>
+                    </pre>
+                </section>
+
+                <section>
+                    <h2 style="text-transform: none;">Revealing Module Pattern</h2>
+                </section>
+
+                <section>
+                    <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;position: absolute;" class="fragment" data-fragment-index="0">
+<code style="line-height: 35px; max-height: 700px;">var propertyModule = (function () {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+})();
+</code>
+                    </pre>
+                    <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;position: absolute;" class="fragment" data-fragment-index="1">
+<code style="line-height: 35px; max-height: 700px;">var propertyModule = (function () {
+
+/* define every member here */
+var propertyName = 'Pensacola Place',
+  city = 'Chicago',
+  state = 'IL';
+
+
+
+
+
+
+
+
+
+
+
+})();
+</code>
+                </pre>
+                    <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;position: absolute;"  class="fragment" data-fragment-index="2">
+<code style="line-height: 35px; max-height: 700px;">var propertyModule = (function () {
+
+/* define every member here */
+var propertyName = 'Pensacola Place',
+  city = 'Chicago',
+  state = 'IL';
+
+var displayPropertyInfo = function() {
+return name + ', ' + city  + ', ' + state;
+}
+
+
+
+
+
+
+
+})();
+</code>
+                </pre>
+                    <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;position: absolute;"  class="fragment" data-fragment-index="3">
+<code style="line-height: 35px; max-height: 700px;">var propertyModule = (function () {
+
+/* define every member here */
+var propertyName = 'Pensacola Place',
+  city = 'Chicago',
+  state = 'IL';
+
+var displayPropertyInfo = function() {
+return name + ', ' + city  + ', ' + state;
+}
+
+/* expose public members */
+return {
+name: propertyName,
+city: city,
+displayPropertyInfo: displayPropertyInfo
+};
+})();
+</code>
+                </pre>
+                </section>
+
+                <section>
+				  <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;">
+    <code style="line-height: 35px; max-height: 700px;">
+/* public members */
+
+console.log(propertyModule.city);
+
+propertyModule.name = 'Orange Apt';
+
+console.log(propertyModule.displayPropertyInfo());
+
+</code>
+                    </pre>
+                </section>
+
+                <section>
+                    <h3 style="text-transform: none;">What is a Angular Service?</h3>
+                    <ul style="width: 90%; margin-top: 0.5em;">
+                        <li class="fragment" data-fragment-index="0">An overloaded term</li>
+                        <li class="fragment" data-fragment-index="1"></li>
+                        <li class="fragment" data-fragment-index="2"></li>
+                    </ul>
+                </section>
+
+			</div>
+
+        </div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+//					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+				]
+			});
+		</script>
+	</body>
+</html>
