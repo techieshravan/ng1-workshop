@@ -454,12 +454,12 @@ myModule.service('ServiceName', function() {
 <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;" class="fragment" data-fragment-index="0">
 <code style="line-height: 35px; max-height: 700px;">var myModule = angular.module('myModule', []);
 
-  myModule.controller('MyController',['ServiceName', function (ServiceName) {
+  myModule.controller('MyController', function(ServiceName) {
   
 	  console.log(ServiceName.serviceMember);
 	  
 	  ServiceName.serviceMethod();
-  }]);
+  });
 </code>
 </pre>
                 </section>
