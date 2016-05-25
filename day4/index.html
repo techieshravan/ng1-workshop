@@ -32,7 +32,7 @@
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
-		<!--[if lt IE 9]>
+        <!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
 	</head>
@@ -43,7 +43,8 @@
 			<div class="slides">
 
 				<section>
-					<h1 style="margin-top: 0.7em; text-transform: none; font-size: 2.5em;">Angular Services and Directives</h1>
+					<h1 style="margin-top: 0.7em; text-transform: none;">Angular Services</h1>
+                    <img src="images/angular.svg" style="width: 150px; border: none;box-shadow: none"/>
 					<p style="margin-top: 0.5em;">
 						<small>By <a href="http://twitter.com/techieshravan">Shravan Kumar Kasagoni</a></small>
 					</p>
@@ -184,7 +185,7 @@ console.log(prop.displayPropertyInfo());
 
                 <section>
 				  <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;">
-    <code style="line-height: 35px; max-height: 700px;">var propertyModule = {
+<code style="line-height: 35px; max-height: 700px;">var propertyModule = {
 
   name: 'Pensacola Place',
 
@@ -210,7 +211,7 @@ console.log(propertyModule.displayPropertyInfo());
 
                 <section>
 				  <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;">
-    <code style="line-height: 35px; max-height: 700px;">var propertyModule = (function () {
+<code style="line-height: 35px; max-height: 700px;">var propertyModule = (function () {
 
   /* private members */
   var city = 'Chicago',
@@ -234,7 +235,7 @@ console.log(propertyModule.displayPropertyInfo());
 
                 <section>
 				  <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;">
-    <code style="line-height: 35px; max-height: 700px;">
+<code style="line-height: 35px; max-height: 700px;">
 /* public members */
 
 console.log(propertyModule.name);
@@ -278,8 +279,8 @@ propertyModule.name = 'Orange Apt';
 
 /* define every member here */
 var propertyName = 'Pensacola Place',
-  city = 'Chicago',
-  state = 'IL';
+    city = 'Chicago',
+    state = 'IL';
 
 
 
@@ -299,11 +300,11 @@ var propertyName = 'Pensacola Place',
 
 /* define every member here */
 var propertyName = 'Pensacola Place',
-  city = 'Chicago',
-  state = 'IL';
+    city = 'Chicago',
+    state = 'IL';
 
 var displayPropertyInfo = function() {
-return name + ', ' + city  + ', ' + state;
+    return name + ', ' + city  + ', ' + state;
 }
 
 
@@ -320,8 +321,8 @@ return name + ', ' + city  + ', ' + state;
 
 /* define every member here */
 var propertyName = 'Pensacola Place',
-  city = 'Chicago',
-  state = 'IL';
+    city = 'Chicago',
+    state = 'IL';
 
 var displayPropertyInfo = function() {
     return name + ', ' + city  + ', ' + state;
@@ -340,7 +341,7 @@ return {
 
                 <section>
 				  <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;">
-    <code style="line-height: 35px; max-height: 700px;">
+<code style="line-height: 35px; max-height: 700px;">
 /* public members */
 
 console.log(propertyModule.city);
@@ -354,7 +355,7 @@ console.log(propertyModule.displayPropertyInfo());
                 </section>
 
                 <section>
-                    <h3 style="text-transform: none;">What is a Angular Service?</h3>
+                    <h2 style="text-transform: none;">What is a Angular Service?</h2>
                     <ul style="width: 90%; margin-top: 0.5em;">
                         <li class="fragment" data-fragment-index="0">An overloaded term</li>
                         <li class="fragment" data-fragment-index="1"></li>
@@ -362,6 +363,16 @@ console.log(propertyModule.displayPropertyInfo());
                     </ul>
                 </section>
 
+
+
+
+
+
+
+                <section>
+                    <h2 style="text-transform: none;">Examples @ GitHub</h2>
+                    <p>https://github.com/techieshravan/ng1-workshop/</p>
+                </section>
 			</div>
 
         </div>
