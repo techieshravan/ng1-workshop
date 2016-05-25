@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/techieshravan/ng1-workshop#readme",
   "dependencies": {
-    "angular": "^1.4.9"
+    "angular": "^1.4.9",
+    "bootstrap": "^3.3.6"
   },
   "devDependencies": {
     "lite-server": "^2.2.0"
