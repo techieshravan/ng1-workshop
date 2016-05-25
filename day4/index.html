@@ -44,39 +44,32 @@
 
 				<section>
 					<h1 style="margin-top: 0.7em; text-transform: none;">Angular Services</h1>
-                    <img src="images/angular.svg" style="width: 150px; border: none;box-shadow: none"/>
+					<img src="images/angular.svg" style="width: 150px; border: none;box-shadow: none"/>
 					<p style="margin-top: 0.5em;">
 						<small>By <a href="http://twitter.com/techieshravan">Shravan Kumar Kasagoni</a></small>
 					</p>
 				</section>
 
 				<section>
-
 					<h3 style="text-transform: none;">Shravan Kumar Kasagoni</h3>
-
-                    <h4 style="text-transform: none;">Microsoft MVP - VSDT</h4>
-
-
+					<h4 style="text-transform: none;">Microsoft MVP - VSDT</h4>
 					<p style="font-size: 0.8em"><a href="http://twitter.com/techieshravan">@techieshravan</a> on Twitter</p>
-
 					<p style="font-size: 0.8em"><a href="http://github.com/techieshravan">@techieshravan</a> on GitHub</p>
-
 					<p style="font-size: 0.8em"><a href="http://theshravan.net">theshravan.net</a> - Blog</p>
-
 				</section>
 
-                <section>
-                    <h2 class="headline">JavaScript Basics</h2>
-                </section>
+        <section>
+            <h2 class="headline">JavaScript Basics</h2>
+        </section>
 
-                <section>
-                    <h2 style="text-transform: none;">IIFE (Immediately Invoked Function Expression)</h2>
-                </section>
+        <section>
+            <h2 style="text-transform: none;">IIFE (Immediately Invoked Function Expression)</h2>
+        </section>
 
-                <section>
-                    <h3 style="text-transform: none;">JavaScript Function Invocation</h3>
-                    <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none; float: left;width: 49%;" class="fragment" data-fragment-index="0">
-<code style="line-height: 35px; max-height: 700px;">/* Function Declaration */
+        <section>
+            <h3 style="text-transform: none;">JavaScript Function Invocation</h3>
+<pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none; float: left;width: 49%;" class="fragment" data-fragment-index="0">
+<code style="line-height: 35px; max-height: 700px;">/* Function Expression */
 var testMethod = function () {
 
 
@@ -86,9 +79,9 @@ var testMethod = function () {
 
 testMethod();
 </code>
-                    </pre>
-                    <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none; float: right;width: 49%; margin-left:2%" class="fragment" data-fragment-index="1">
-<code style="line-height: 35px; max-height: 700px;">/* Function Expression */
+</pre>
+<pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none; float: right;width: 49%; margin-left:2%" class="fragment" data-fragment-index="1">
+<code style="line-height: 35px; max-height: 700px;">/* Function Declaration */
 function testMethod () {
 
 
@@ -98,15 +91,15 @@ function testMethod () {
 
 testMethod();
 </code>
-                    </pre>
-                    <p class="fragment" data-fragment-index="2" style="clear:both;">
-                        Function expressions can not be invoked before they are declared
-                    </p>
+</pre>
+									<p class="fragment" data-fragment-index="2" style="clear:both;">
+									    Function expressions can not be invoked before they are declared
+									</p>
                 </section>
 
                 <section>
                     <h3 style="text-transform: none;">Immediately Invoked Function Expression</h3>
-                    <pre style="font-size: 0.7em; margin-top: 0.5em; box-shadow: none; position: absolute;" class="fragment" data-fragment-index="0">
+<pre style="font-size: 0.7em; margin-top: 0.5em; box-shadow: none; position: absolute;" class="fragment" data-fragment-index="0">
 <code style="line-height: 35px; max-height: 700px;">
  function () {
 
@@ -116,8 +109,8 @@ testMethod();
 }
 
 </code>
-                    </pre>
-                    <pre style="font-size: 0.7em; margin-top: 0.5em; box-shadow: none; position: absolute;" class="fragment" data-fragment-index="1">
+</pre>
+<pre style="font-size: 0.7em; margin-top: 0.5em; box-shadow: none; position: absolute;" class="fragment" data-fragment-index="1">
 <code style="line-height: 35px; max-height: 700px;">
 (function () {
 
@@ -127,8 +120,8 @@ testMethod();
 })
 
 </code>
-                    </pre>
-                    <pre style="font-size: 0.7em; margin-top: 0.5em; box-shadow: none; position: absolute;" class="fragment" data-fragment-index="2">
+</pre>
+<pre style="font-size: 0.7em; margin-top: 0.5em; box-shadow: none; position: absolute;" class="fragment" data-fragment-index="2">
 <code style="line-height: 35px; max-height: 700px;">
 (function () {
 
@@ -138,7 +131,7 @@ testMethod();
 })();
 
 </code>
-                    </pre>
+</pre>
                 </section>
 
                 <section>
@@ -155,7 +148,7 @@ testMethod();
                 </section>
 
                 <section>
-				  <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;">
+<pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;">
 <code style="line-height: 35px; max-height: 700px;">function Property (name, city, state) {
 
   this.name = name;
@@ -172,7 +165,7 @@ var prop = new Property('Pensacola Place', 'Chicago', 'IL');
 console.log(prop.name);
 console.log(prop.displayPropertyInfo());
 </code>
-                    </pre>
+</pre>
                 </section>
 
                 <section>
@@ -184,7 +177,7 @@ console.log(prop.displayPropertyInfo());
                 </section>
 
                 <section>
-				  <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;">
+<pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;">
 <code style="line-height: 35px; max-height: 700px;">var propertyModule = {
 
   name: 'Pensacola Place',
@@ -202,7 +195,7 @@ console.log(prop.displayPropertyInfo());
 console.log(propertyModule.name);
 console.log(propertyModule.displayPropertyInfo());
 </code>
-                    </pre>
+</pre>
                 </section>
 
                 <section>
@@ -210,7 +203,7 @@ console.log(propertyModule.displayPropertyInfo());
                 </section>
 
                 <section>
-				  <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;">
+<pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;">
 <code style="line-height: 35px; max-height: 700px;">var propertyModule = (function () {
 
   /* private members */
@@ -230,11 +223,11 @@ console.log(propertyModule.displayPropertyInfo());
   };
 })();
 </code>
-                    </pre>
+</pre>
                 </section>
 
                 <section>
-				  <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;">
+<pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;">
 <code style="line-height: 35px; max-height: 700px;">
 /* public members */
 
@@ -245,7 +238,7 @@ console.log(propertyModule.displayPropertyInfo());
 propertyModule.name = 'Orange Apt';
 
 </code>
-                    </pre>
+</pre>
                 </section>
 
                 <section>
@@ -253,7 +246,7 @@ propertyModule.name = 'Orange Apt';
                 </section>
 
                 <section>
-                    <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;position: absolute;" class="fragment" data-fragment-index="0">
+<pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;position: absolute;" class="fragment" data-fragment-index="0">
 <code style="line-height: 35px; max-height: 700px;">var propertyModule = (function () {
 
 
@@ -273,8 +266,8 @@ propertyModule.name = 'Orange Apt';
 
 })();
 </code>
-                    </pre>
-                    <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;position: absolute;" class="fragment" data-fragment-index="1">
+</pre>
+<pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;position: absolute;" class="fragment" data-fragment-index="1">
 <code style="line-height: 35px; max-height: 700px;">var propertyModule = (function () {
 
 /* define every member here */
@@ -294,8 +287,8 @@ var propertyName = 'Pensacola Place',
 
 })();
 </code>
-                </pre>
-                    <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;position: absolute;"  class="fragment" data-fragment-index="2">
+</pre>
+<pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;position: absolute;"  class="fragment" data-fragment-index="2">
 <code style="line-height: 35px; max-height: 700px;">var propertyModule = (function () {
 
 /* define every member here */
@@ -315,8 +308,8 @@ var displayPropertyInfo = function() {
 
 })();
 </code>
-                </pre>
-                    <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;position: absolute;"  class="fragment" data-fragment-index="3">
+</pre>
+<pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;position: absolute;"  class="fragment" data-fragment-index="3">
 <code style="line-height: 35px; max-height: 700px;">var propertyModule = (function () {
 
 /* define every member here */
@@ -336,11 +329,11 @@ return {
 };
 })();
 </code>
-                </pre>
+</pre>
                 </section>
 
                 <section>
-				  <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;">
+<pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;">
 <code style="line-height: 35px; max-height: 700px;">
 /* public members */
 
@@ -351,16 +344,16 @@ propertyModule.name = 'Orange Apt';
 console.log(propertyModule.displayPropertyInfo());
 
 </code>
-                    </pre>
+</pre>
                 </section>
 
                 <section>
                     <h2 style="text-transform: none;">What is a Angular Service?</h2>
                     <ul style="width: 95%; margin-top: 0.5em;">
-                        <li class="fragment" data-fragment-index="1" style="padding-bottom: 0.5em">Service is not a 'web service'</li>
-												<li class="fragment" data-fragment-index="2" style="padding-bottom: 0.5em">Its' a component/object that serves your app</li>
-                        <li class="fragment" data-fragment-index="3" style="padding-bottom: 0.5em">Angualr built-in services are prefixed with $</li>
-                        <li class="fragment" data-fragment-index="4" style="padding-bottom: 0.5em">Services are singleton, only *one instnace of service avialable per app*.</li>
+                        <li class="fragment" data-fragment-index="0" style="padding-bottom: 0.5em">Service ia a overloaded term, it's not a 'web service'</li>
+												<li class="fragment" data-fragment-index="1" style="padding-bottom: 0.5em">It's a component/object that serves your app</li>
+                        <li class="fragment" data-fragment-index="2" style="padding-bottom: 0.5em">Angualr built-in services are prefixed with $</li>
+                        <li class="fragment" data-fragment-index="3" style="padding-bottom: 0.5em">Services are singleton, only *one instnace of service avialable per app*.</li>
                         <li class="fragment" data-fragment-index="4" style="padding-bottom: 0.5em">Services are singleton per $injector, an application can have more than one $injector</li>
                     </ul>
                 </section>
@@ -401,28 +394,28 @@ console.log(propertyModule.displayPropertyInfo());
                     </p>
                 </section>
 
- 		<section>
+ 								<section>
                     <h2 style="text-transform: none;">Creating Services</h2>
                 </section>
-                
-		<section>
+
+								<section>
 	                <p class="fragment" data-fragment-index="0" style="padding-bottom: 0.5em">
 	                	We can define our own services by registering the service's name and <strong>service factory function</strong>, with an Angular module.
-			</p>
+									</p>
 <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;" class="fragment" data-fragment-index="1">
 <code style="line-height: 35px; max-height: 700px;">var myModule = angular.module('myModule', []);
 
-myModule.factory('ServiceName', function() {
-  var serviceMember;
-  
-  var serviceMethod = function () {
-	console.log('serviceMethod');
-  };
-  
-  return  {
-	serviceMember: serviceMember,
-	serviceMethod: serviceMethod
-  };
+myModule.factory('ServiceName', function () {
+    var serviceMember;
+
+    var serviceMethod = function () {
+        console.log('serviceMethod');
+    };
+
+    return {
+        serviceMember: serviceMember,
+        serviceMethod: serviceMethod
+    };
 });
 </code>
 </pre>
@@ -431,78 +424,80 @@ myModule.factory('ServiceName', function() {
                         <p class="fragment" data-fragment-index="0" style="padding-bottom: 0.5em">
                         	We can also define our own services by registering the service's name and <strong>service service function</strong>, with an Angular module.
 			</p>
-			<pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;" class="fragment" data-fragment-index="1">
+<pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;" class="fragment" data-fragment-index="1">
 <code style="line-height: 35px; max-height: 700px;">var myModule = angular.module('myModule', []);
 
-myModule.service('ServiceName', function() {
- 
-  this.serviceMember = '';
-  
-  this.serviceMethod = function () {
-	console.log('newServiceMethod');
-  };
+myModule.service('ServiceName', function () {
+
+    this.serviceMember = '';
+
+    this.serviceMethod = function () {
+        console.log('newServiceMethod');
+    };
 });
 </code>
-			</pre>
+</pre>
                 </section>
-                
-                
-                
-	 	<section>
+
+	 							<section>
                     <h2 style="text-transform: none;">How to use a service</h2>
                 </section>
-                
+
 		<section>
-<pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;" class="fragment" data-fragment-index="0">
+<pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;">
 <code style="line-height: 35px; max-height: 700px;">var myModule = angular.module('myModule', []);
 
-  myModule.controller('MyController', function(ServiceName) {
-  
-	  console.log(ServiceName.serviceMember);
-	  
-	  ServiceName.serviceMethod();
-  });
+myModule.controller('MyController',  function (ServiceName) {
+
+    console.log(ServiceName.serviceMember);
+
+    ServiceName.serviceMethod();
+});
 </code>
 </pre>
                 </section>
-                
+
                 <section>
-                    <h2 style="text-transform: none;">How service gets instantiate by Angular</h2>
+                    <h2 style="text-transform: none;">How service gets instantiated by Angular?</h2>
                 </section>
-                
-		<section>
+
+								<section>
+									<h3 style="text-transform: none;">Angualr factory function code</h4>
 <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;" class="fragment" data-fragment-index="0">
-	<p>Angualr factory function code</p>
 <code style="line-height: 35px; max-height: 700px;">function factory(name, factoryFn, enforce) {
-	return provider(name, {
-		$get: enforce !== false ? enforceReturnValue(name, factoryFn) : factoryFn
-	});
+
+    return provider(name, {
+        $get: enforce !== false ? enforceReturnValue(name, factoryFn) : factoryFn
+    });
+
 }
 </code>
 </pre>
-                </section>
-                
-		<section>
+								</section>
+
+								<section>
+									<h3 style="text-transform: none;">Angualr service function code</h4>
 <pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;" class="fragment" data-fragment-index="0">
-	<p>Angualr service function code</p>
 <code style="line-height: 35px; max-height: 700px;">function service(name, constructor) {
-	return factory(name, ['$injector', function($injector) {
-	  return $injector.instantiate(constructor);
-	}]);
+
+    return factory(name, ['$injector', function ($injector) {
+        return $injector.instantiate(constructor);
+    }]);
+
 }
 </code>
 </pre>
                 </section>
-                
+
                  <section>
                     <h4 style="text-transform: none;">Functionally factory and service both are same.<br/>Prefer factory function over service function, dealing with this keyword is messy.</h2>
                 </section>
-                
+
                 <section>
                     <h2 style="text-transform: none;">Examples @ GitHub</h2>
                     <p>https://github.com/techieshravan/ng1-workshop/</p>
                 </section>
-			</div>
+							</div>
 
         </div>
 

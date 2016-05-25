@@ -153,16 +153,12 @@ body {
 .reveal code {
   font-family: monospace; }
 
-.reveal pre code, .reveal pre hl-code {
+.reveal pre code {
   display: block;
   padding: 5px;
   overflow: auto;
   max-height: 400px;
   word-wrap: normal; }
-
-.reveal pre hl-code span {
-  color: rgba(255, 255, 255, 0.7);
-}
 
 .reveal table {
   margin: auto;
