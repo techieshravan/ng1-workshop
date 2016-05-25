@@ -399,43 +399,103 @@ console.log(propertyModule.displayPropertyInfo());
                     </p>
                 </section>
 
-
-		<section>
+ 		<section>
                     <h2 style="text-transform: none;">Creating Services</h2>
-                    <ul style="width: 95%; margin-top: 0.5em;">
-                        <li class="fragment" data-fragment-index="0" style="padding-bottom: 0.5em">
-                        	We can define our own services by registering the service's name and <strong>service factory function</strong>, with an Angular module.<br/>
-<pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none; float: left;width: 49%;" class="fragment" data-fragment-index="1">
+                </section>
+                
+		<section>
+	                <p class="fragment" data-fragment-index="0" style="padding-bottom: 0.5em">
+	                	We can define our own services by registering the service's name and <strong>service factory function</strong>, with an Angular module.
+			</p>
+<pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;" class="fragment" data-fragment-index="1">
 <code style="line-height: 35px; max-height: 700px;">var myModule = angular.module('myModule', []);
 
-myModule.factory('serviceName', function() {
-  var newServiceInstance;
+myModule.factory('ServiceName', function() {
+  var serviceMember;
   
-  // factory function body that constructs newServiceInstance
-  return newServiceInstance;
-});
-</code>
-</pre>
-                        </li>
-                        <li class="fragment" data-fragment-index="2" style="padding-bottom: 0.5em">
-                        	We can also define our own services by registering the service's name and <strong>service service function</strong>, with an Angular module.<br/>
-<pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none; float: left;width: 49%;" class="fragment" data-fragment-index="1">
-<code style="line-height: 35px; max-height: 700px;">var myModule = angular.module('myModule', []);
-
-myModule.service('serviceName', function() {
- 
-  this.newServiceInstance = '';
+  var serviceMethod = function () {
+	console.log('serviceMethod');
+  };
   
-  this.newServiceMethod = function () {
-  	console.log('newServiceMethod');
+  return  {
+	serviceMember: serviceMember,
+	serviceMethod: serviceMethod
   };
 });
 </code>
 </pre>
-                        </li>
+		</section>
+                <section>
+                        <p class="fragment" data-fragment-index="0" style="padding-bottom: 0.5em">
+                        	We can also define our own services by registering the service's name and <strong>service service function</strong>, with an Angular module.
+			</p>
+			<pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;" class="fragment" data-fragment-index="1">
+<code style="line-height: 35px; max-height: 700px;">var myModule = angular.module('myModule', []);
 
-                    </ul>
+myModule.service('ServiceName', function() {
+ 
+  this.serviceMember = '';
+  
+  this.serviceMethod = function () {
+	console.log('newServiceMethod');
+  };
+});
+</code>
+			</pre>
                 </section>
+                
+                
+                
+	 	<section>
+                    <h2 style="text-transform: none;">How to use a service</h2>
+                </section>
+                
+		<section>
+<pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;" class="fragment" data-fragment-index="0">
+<code style="line-height: 35px; max-height: 700px;">var myModule = angular.module('myModule', []);
+
+  myModule.controller('MyController', function (ServiceName) {
+  
+  console.log(ServiceName.serviceMember);
+
+  ServiceName.serviceMethod();
+});
+</code>
+</pre>
+                </section>
+                
+                <section>
+                    <h2 style="text-transform: none;">How service gets instantiate by Angular</h2>
+                </section>
+                
+		<section>
+<pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;" class="fragment" data-fragment-index="0">
+	<p>Angualr factory function code</p>
+<code style="line-height: 35px; max-height: 700px;">function factory(name, factoryFn, enforce) {
+	return provider(name, {
+		$get: enforce !== false ? enforceReturnValue(name, factoryFn) : factoryFn
+	});
+}
+</code>
+</pre>
+                </section>
+                
+		<section>
+<pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none;" class="fragment" data-fragment-index="0">
+	<p>Angualr service function code</p>
+<code style="line-height: 35px; max-height: 700px;">function service(name, constructor) {
+	return factory(name, ['$injector', function($injector) {
+	  return $injector.instantiate(constructor);
+	}]);
+}
+</code>
+</pre>
+                </section>
+                
+                 <section>
+                    <h4 style="text-transform: none;">Functionally factory and service both are same.<br/>Prefer factory function over service function, dealing with this keyword is messy.</h2>
+                </section>
+                
                 <section>
                     <h2 style="text-transform: none;">Examples @ GitHub</h2>
                     <p>https://github.com/techieshravan/ng1-workshop/</p>
