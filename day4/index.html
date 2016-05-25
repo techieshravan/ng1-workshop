@@ -356,7 +356,7 @@ console.log(propertyModule.displayPropertyInfo());
 
                 <section>
                     <h2 style="text-transform: none;">What is a Angular Service?</h2>
-                    <ul style="width: 90%; margin-top: 0.5em;">
+                    <ul style="width: 95%; margin-top: 0.5em;">
                         <li class="fragment" data-fragment-index="1" style="padding-bottom: 0.5em">Service is not a 'web service'</li>
 												<li class="fragment" data-fragment-index="2" style="padding-bottom: 0.5em">Its' a component/object that serves your app</li>
                         <li class="fragment" data-fragment-index="3" style="padding-bottom: 0.5em">Angualr built-in services are prefixed with $</li>
@@ -399,6 +399,43 @@ console.log(propertyModule.displayPropertyInfo());
                     </p>
                 </section>
 
+
+		<section>
+                    <h2 style="text-transform: none;">Creating Services</h2>
+                    <ul style="width: 95%; margin-top: 0.5em;">
+                        <li class="fragment" data-fragment-index="0" style="padding-bottom: 0.5em">
+                        	We can define our own services by registering the service's name and <strong>service factory function</strong>, with an Angular module.<br/>
+<pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none; float: left;width: 49%;" class="fragment" data-fragment-index="1">
+<code style="line-height: 35px; max-height: 700px;">var myModule = angular.module('myModule', []);
+
+myModule.factory('serviceName', function() {
+  var newServiceInstance;
+  
+  // factory function body that constructs newServiceInstance
+  return newServiceInstance;
+});
+</code>
+</pre>
+                        </li>
+                        <li class="fragment" data-fragment-index="2" style="padding-bottom: 0.5em">
+                        	We can also define our own services by registering the service's name and <strong>service service function</strong>, with an Angular module.<br/>
+<pre style="font-size: 0.6em; margin-top: 0.5em; box-shadow: none; float: left;width: 49%;" class="fragment" data-fragment-index="1">
+<code style="line-height: 35px; max-height: 700px;">var myModule = angular.module('myModule', []);
+
+myModule.service('serviceName', function() {
+ 
+  this.newServiceInstance = '';
+  
+  this.newServiceMethod = function () {
+  	console.log('newServiceMethod');
+  };
+});
+</code>
+</pre>
+                        </li>
+
+                    </ul>
+                </section>
                 <section>
                     <h2 style="text-transform: none;">Examples @ GitHub</h2>
                     <p>https://github.com/techieshravan/ng1-workshop/</p>
