@@ -8,7 +8,7 @@
     function HelloWorldDirective() {
 
         return {
-          template: '<h1>Hello World Directive</h1>'
+            template: '<h1>Hello World Directive</h1>'
         };
     }
 
