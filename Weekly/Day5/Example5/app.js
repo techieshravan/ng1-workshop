@@ -1,2 +1,2 @@
 angular
-    .module('demoApp', []);
+    .module('eventsApp', []);

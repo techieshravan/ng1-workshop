@@ -5,7 +5,7 @@
 		.module('demoApp')
 		.controller('NameController', NameController);
 
-	NameController.$inject = ['$scope']
+	NameController.$inject = ['$scope'];
 
 	function NameController($scope) {
 

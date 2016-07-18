@@ -1,1 +1,1 @@
-# Isolating the Scope of a Directive
+# Working with Directives and Controllers

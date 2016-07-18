@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('demoCityApp')
+        .module('cityDetailApp')
         .controller('CityDetailController', CityDetailController);
 
     function CityDetailController() {
@@ -19,7 +19,7 @@
   			country_code: "GB"
   		};
 
-      var venues = [
+        var venues = [
         {
           id: 12345671,
           name: "The Event Space 1",
@@ -30,7 +30,7 @@
           country_code: "GB"
         },
         {
-          id: 12345673,
+          id: 12345672,
           name: "The Event Space 2",
           city: "Bristol",
           country: "United Kingdom",
@@ -103,8 +103,8 @@
         }
       ];
 
-      vm.venue = venue;
-      vm.venues = venues;
+        vm.venue = venue;
+        vm.venues = venues;
     }
 
 })();
