@@ -1,1 +1,1 @@
-# Working with primitives in Angular JS 1
+# Working with primitives

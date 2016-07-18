@@ -1,1 +1,1 @@
-# Working with Nested Controllers in Angular JS 1
+# Working with Nested Controllers
