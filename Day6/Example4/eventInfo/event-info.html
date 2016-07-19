@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-sm-12">
+        <time ng-bind="event.date | date:'EEE, MMM dd' | uppercase"></time>
+        <span>{{event.venue.city | uppercase}}, {{event.venue.state | uppercase}}</span>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <h2 ng-bind="event.name"></h2>
+    </div>
+</div>
+<div class="row">
+    
+    <div class="col-sm-6" ng-show="event.sessions.length">
+        <h4>Sessions</h4>
+        <ul class="list-unstyled">
+            <li ng-repeat="session in event.sessions">
+                {{session}}&nbsp;<span class="glyphicon glyphicon-remove" ng-click="removeSession($index)"></span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="col-sm-6" ng-show="event.speakers.length">
+        <h4>Speakers</h4>
+        <ul class="list-unstyled">
+            <li ng-repeat="speaker in event.speakers">
+                {{speaker}}&nbsp;<span class="glyphicon glyphicon-remove" ng-click="removeSpeaker($index)"></span>
+            </li>
+        </ul>
+    </div>
+
+</div>

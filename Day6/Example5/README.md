@@ -1,0 +1,1 @@
+# Directive with isolated scope
