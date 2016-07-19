@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="ngExample2">
+
+    <head>
+        <title>Working with Objects</title>
+    </head>
+
+    <body>
+
+      <div ng-controller="MainController">
+        <h1>{{title}}</h1>
+        <p>Name: {{userDetails.name}}</p>
+        <p>Age: {{userDetails.age}}</p>
+        <p>Active: {{userDetails.userActive}}</p>
+        <p>Email: {{userDetails.email}}</p>
+        <p>PhoneNumber: {{userDetails.phoneNumber}}</p>
+      </div>
+
+      <script src="../../node_modules/angular/angular.js"></script>
+      <script src="app.js"></script>
+      <script src="main.controller.js"></script>
+    </body>
+
+</html>

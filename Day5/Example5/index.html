@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="eventsApp">
+
+<head>
+  <title>Working with Directives and Controllers</title>
+  <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css" charset="utf-8">
+</head>
+
+<body>
+
+  <div ng-controller="EventInfoController" class="container">
+
+    <div event-info></div>
+    <hr/>
+    <!--<event-info></event-info>-->
+
+  </div>
+
+  <script src="../../node_modules/angular/angular.js"></script>
+  <script src="app.js"></script>
+  <script src="eventInfo/event-info.controller.js"></script>
+  <script src="eventInfo/event-info.directive.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="ngExample1">
+
+    <head>
+        <title>Working with primitives</title>
+    </head>
+
+    <body>
+
+      <div ng-controller="MyController1">
+        <h2>Controller 1</h2>
+        <p>Name: {{userName}}</p>
+        <p>Age: {{age}}</p>
+      </div>
+
+      <div ng-controller="MyController2">
+        <h2>Controller 2</h2>
+        <p>Active: {{userActive}}</p>
+        <p>Email: {{email}}</p>
+        <p>PhoneNumber: {{phoneNumber}}</p>
+      </div>
+
+      <script src="../../node_modules/angular/angular.js"></script>
+      <script src="mycontroller.js"></script>
+    </body>
+
+</html>

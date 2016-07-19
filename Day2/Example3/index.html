@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="ngExample3">
+
+    <head>
+        <title>Working with Nested Controllers in AngularJS</title>
+    </head>
+
+    <body>
+
+      <div ng-controller="MainController1">
+        <p>{{title}}</p>
+      </div>
+
+      <div ng-controller="MainController2">
+        <p>{{title}}</p>
+      </div>
+
+      <div ng-controller="MainController1">
+        <strong>Nested Controllers</strong>
+
+        <p>{{title}}</p>
+
+        <div ng-controller="MainController2">
+          <p>{{title}}</p>
+        </div>
+
+      </div>
+
+
+      <div ng-controller="MainController1">
+        <strong>Nested Controllers - Access Parent Controller in Child Controller</strong>
+
+        <p>{{title}}</p>
+
+        <div ng-controller="MainController2">
+          <p>{{title}}</p>
+          <p>{{$parent.title}} - Displaying in MainController2, should n't use $parent</p>
+        </div>
+
+      </div>
+
+      <script src="../../node_modules/angular/angular.js"></script>
+      <script src="app.js"></script>
+      <script src="controllers.js"></script>
+    </body>
+
+</html>
